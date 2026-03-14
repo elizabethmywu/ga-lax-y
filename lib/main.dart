@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_generative_ai/google_generative_ai.dart';
+import 'calendar_section.dart';
 import 'gemini_section.dart';
+import 'plant_shelf.dart';
 
 void main() {
   runApp(const MyApp());
@@ -77,26 +79,19 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          //
-          // TRY THIS: Invoke "debug painting" (choose the "Toggle Debug Paint"
-          // action in the IDE, or press "p" in the console), to see the
-          // wireframe for each widget.
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: const [
-            Expanded(child: GeminiSection()),
-          ],
-        ),
+        child:Row(
+        // Stretch makes the children fill the full vertical height of the screen
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: const [
+           // flex: 1 means this takes up 1/3rd of the available width
+          Expanded(flex: 2, child: PlantShelf()),
+          VerticalDivider(width: 1),
+          Expanded(flex: 2, child: CalendarSection()),
+          VerticalDivider(width: 1),
+          // flex: 2 means this takes up 2/3rds of the available width
+          Expanded(flex: 3, child: GeminiSection()),
+        ],
       ),
-    );
+    ));
   }
 }
