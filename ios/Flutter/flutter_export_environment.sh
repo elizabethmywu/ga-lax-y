@@ -1,9 +1,9 @@
 #!/bin/sh
 # This is a generated file; do not edit or check into version control.
-export "FLUTTER_ROOT=C:\Users\Shiny\Desktop\Flutter\flutter"
-export "FLUTTER_APPLICATION_PATH=C:\Users\Shiny\Desktop\CMPT\Personal\HackTheGalaxy\ga-lax-y"
+export "FLUTTER_ROOT=/Users/maellestrom/Documents/GitHub/flutter"
+export "FLUTTER_APPLICATION_PATH=/Users/maellestrom/Documents/GitHub/ga-lax-y"
 export "COCOAPODS_PARALLEL_CODE_SIGN=true"
-export "FLUTTER_TARGET=lib\main.dart"
+export "FLUTTER_TARGET=lib/main.dart"
 export "FLUTTER_BUILD_DIR=build"
 export "FLUTTER_BUILD_NAME=1.0.0"
 export "FLUTTER_BUILD_NUMBER=1"
