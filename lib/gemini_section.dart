@@ -26,7 +26,7 @@ class _GeminiSectionState extends State<GeminiSection> {
     setState(() => _loading = true);
 
     try {
-      final model = GenerativeModel(model: 'gemini-1.5-flash', apiKey: _apiKey);
+      final model = GenerativeModel(model: 'gemini-2.0-flash', apiKey: _apiKey);
       final content = [Content.text(_controller.text)];
       final response = await model.generateContent(content);
       
